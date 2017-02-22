@@ -5,12 +5,11 @@ require 'pry'
 
 class App
 
-  attr_accessor :env, :path, :num, :headers, :code, :body
+  attr_accessor :env, :path, :headers, :code, :body
 
   def initialize(env)
     @env = env
     @path = env["PATH_INFO"].split('/')
-    @num = path[2] ? path[2].to_i : 1
     @headers = {'Content-Type' => 'text/html'}
     @code = '200'
     @body = []
