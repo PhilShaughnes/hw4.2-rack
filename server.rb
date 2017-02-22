@@ -1,7 +1,6 @@
 require 'rack'
 require_relative 'app'
 
-app = App
 # app = Proc.new do |env|
 #   # Finds the num of paragraphs requested, or sets it to 1
 #   num = env["REQUEST_PATH"].sub(/\/\w+[|\/]/, "")
@@ -40,4 +39,4 @@ app = App
 #   [code, {'Content-Type' => 'text/html'}, body ]
 # end
 
-Rack::Handler::WEBrick.run app
+Rack::Handler::WEBrick.run App
