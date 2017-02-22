@@ -1,4 +1,4 @@
-require 'rack'
+#require 'rack'
 require 'thin'
 require_relative 'app'
 
