@@ -10,7 +10,7 @@ class App
   def initialize(env)
     @env = env
     @path = env["PATH_INFO"].split('/')
-    @num = path[2] ? path[2].to_i : 1 #env["REQUEST_PATH"].sub(/\/\w+[|\/]/, "")
+    @num = path[2] ? path[2].to_i : 1
     @headers = {'Content-Type' => 'text/html'}
     @code = '200'
     @body = []
@@ -36,7 +36,7 @@ class App
     when "starwars"     then lipsum(Starwars)
     when "kitty"        then lipsum(Kitty)
     when "pirate"       then lipsum(Pirate)
-    when "current_time" then Time.new.strftime("%H:%M:%S %h %d %Y")
+    when "current_time" then Time.new.strftime("%I:%M:%S%p, %h %d %Y %Z")
     else four
     end
     [self.code, headers, body]

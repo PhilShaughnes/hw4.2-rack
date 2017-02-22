@@ -85,7 +85,7 @@ class TestThing < Minitest::Test
   def test_current_time
     get "/current_time"
     assert last_response.ok?, last_response.status
-    assert_equal Time.new.strftime("%H:%M:%S %h %d %Y"), last_response.body
+    assert_equal Time.new.strftime("%I:%M:%S, %h %d %Y %Z"), last_response.body
   end
 
 
